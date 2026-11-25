@@ -1,0 +1,71 @@
+{
+  "name": "dsh-resource-url-compat",
+  "version": "0.2.0",
+  "description": "Older-Chromium dsh-resource:// URL repair plus native-first, Worker-isolated previews for media, extra images, fonts, archives, and unknown binaries.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/DETAIL.md",
+    "docs/DETAIL.zh.md",
+    "docs/preview.svg",
+    "docs/TESTING.md",
+    "src",
+    "scripts/build.mjs",
+    "scripts/make-fixtures.py",
+    "tests",
+    "RELEASE.md",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview"
+      ]
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/build.mjs --verify",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "main": "index.js",
+  "engines": {
+    "dsh": "^0.2.3-alpha.2"
+  },
+  "author": "DeepSeek Harness contributors",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "file-preview",
+    "preview",
+    "worker",
+    "archive",
+    "font"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vite": "8.2.2",
+    "publint": "0.3.24"
+  }
+}

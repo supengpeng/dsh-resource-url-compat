@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "资源预览与地址兼容",
+    "description": "修复旧版 Chromium 对 `dsh-resource://` 主机名的解析，并预览媒体、AVIF/TIFF/HEIC 图片、字体、ZIP/TAR/GZ 压缩包及其他二进制文件。解析在一次性 Web Worker 中运行，媒体、图片和字体使用浏览器原生解码；文件内容不会被执行。在“工作区文件”中打开文件，并在预览工具栏选择查看器。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

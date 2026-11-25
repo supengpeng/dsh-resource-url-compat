@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Resource previews and URL compatibility",
+    "description": "Repairs `dsh-resource://` host parsing in older Chromium builds, then previews media, AVIF/TIFF/HEIC images, fonts, ZIP/TAR/GZ archives, and other binaries. Parsing runs in disposable Web Workers; media, image, and font decoding use the browser; files are never executed. Open a file from **Workspace files** and choose a viewer in the preview toolbar.",
+    "detail": "docs/DETAIL.md"
+  }
+}

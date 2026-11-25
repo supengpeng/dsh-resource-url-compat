@@ -1,0 +1,3 @@
+- insert:
+    - id: resource-url-compat
+      name: 'dsh-resource-url-compat'
